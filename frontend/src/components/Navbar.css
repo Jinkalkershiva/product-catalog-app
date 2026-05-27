@@ -1,0 +1,225 @@
+.main-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--navy-dark);
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: 850;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #ffffff 60%, var(--accent-rose) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: var(--transition-normal);
+}
+
+.nav-logo:hover {
+  transform: scale(1.02);
+}
+
+.nav-center {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: var(--transition-normal);
+}
+
+.nav-link:hover, 
+.nav-link.active {
+  color: #ffffff;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-search-input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #ffffff;
+  outline: none;
+  width: 200px;
+  transition: var(--transition-normal);
+}
+
+.nav-search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.nav-search-input:focus {
+  width: 250px;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--accent-rose);
+}
+
+.nav-cart-btn {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.nav-cart-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.cart-icon {
+  font-size: 16px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--accent-rose);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 10px;
+  min-width: 16px;
+  text-align: center;
+  animation: popScale 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-user-dropdown {
+  position: relative;
+}
+
+.nav-avatar-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-avatar-char {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent-rose);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.nav-username {
+  max-width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdown-arrow {
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  min-width: 180px;
+  padding: 12px 0;
+  z-index: 110;
+  border: 1px solid var(--border-color);
+  animation: slideDownIn 200ms ease-out;
+}
+
+.dropdown-user-info {
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-user-info strong {
+  color: var(--navy-dark);
+  font-size: 14px;
+}
+
+.dropdown-user-email {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.dropdown-menu hr {
+  margin: 8px 0;
+  border: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  color: var(--navy-dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition-normal);
+}
+
+.dropdown-item:hover {
+  background: #f8fafc;
+  color: var(--accent-rose);
+}
+
+.dropdown-item.logout {
+  color: var(--accent-rose);
+}
+
+.dropdown-item.logout:hover {
+  background: rgba(230, 60, 109, 0.05);
+}
+
+@media (max-width: 768px) {
+  .nav-center {
+    display: none;
+  }
+}

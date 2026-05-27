@@ -1,0 +1,164 @@
+/* ==========================================
+   PRODUCT CARD STYLE
+   ========================================== */
+.product-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: var(--transition-normal);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(230, 60, 109, 0.2);
+}
+
+.product-card-img-wrapper {
+  position: relative;
+  aspect-ratio: 4/3;
+  width: 100%;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.product-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-normal);
+}
+
+.product-card:hover .product-card-img {
+  transform: scale(1.06);
+}
+
+.product-card-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 16, 53, 0.4);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.product-card-hover-overlay span {
+  background: #ffffff;
+  color: var(--navy-dark);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-card:hover .product-card-hover-overlay {
+  opacity: 1;
+}
+
+.product-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Pill Category Badge */
+.category-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: fit-content;
+  margin-bottom: 12px;
+}
+
+.badge-electronics {
+  background: rgba(99, 102, 241, 0.08);
+  color: #6366f1;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.badge-clothing {
+  background: rgba(168, 85, 247, 0.08);
+  color: #a855f7;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.badge-home {
+  background: rgba(16, 185, 129, 0.08);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.badge-default {
+  background: rgba(139, 143, 168, 0.08);
+  color: var(--text-muted);
+  border: 1px solid rgba(139, 143, 168, 0.2);
+}
+
+.product-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.product-card-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-card-price-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 12px;
+}
+
+.product-card-price {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--accent-rose);
+}
+
+.product-card-add-btn {
+  width: 100%;
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  color: var(--navy-dark);
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.product-card:hover .product-card-add-btn {
+  background: var(--accent-rose);
+  color: #ffffff;
+  border-color: var(--accent-rose);
+  box-shadow: 0 4px 10px rgba(230, 60, 109, 0.2);
+}

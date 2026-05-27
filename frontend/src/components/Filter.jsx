@@ -1,13 +1,15 @@
-function Filter({ setCategory }) {
+function Filter({ setCategory, categories }) {
   return (
     <select
       className="filter"
       onChange={(e) => setCategory(e.target.value)}
     >
-      <option value="All">All</option>
-      <option value="Electronics">Electronics</option>
-      <option value="Clothing">Clothing</option>
-      <option value="Home and Kitchen">Home and Kitchen</option>
+      <option value="All">All Categories</option>
+      {categories.map((c) => (
+        <option key={c.id} value={c.name}>
+          {c.name}
+        </option>
+      ))}
     </select>
   );
 }

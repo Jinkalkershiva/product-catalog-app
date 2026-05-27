@@ -1,0 +1,126 @@
+/* ==========================================
+   HOMEPAGE DEEP GRADIENT HERO BANNER & CATALOG GRID
+   ========================================== */
+.homepage-content {
+  padding-bottom: 80px;
+}
+
+.hero-banner {
+  position: relative;
+  background: linear-gradient(135deg, #0f1035 0%, #191b57 100%);
+  padding: 100px 0;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.hero-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(230, 60, 109, 0.15) 0%, transparent 70%);
+  z-index: 1;
+}
+
+.hero-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero-banner-content h1 {
+  font-size: 48px;
+  font-weight: 850;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ffffff 50%, var(--accent-rose) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.hero-banner-content p {
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.hero-cta-btn {
+  background: var(--accent-rose);
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  box-shadow: 0 4px 12px rgba(230, 60, 109, 0.3);
+}
+
+.hero-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(230, 60, 109, 0.5);
+}
+
+/* Catalog Layout with Grid */
+.catalog-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  animation: slideUpIn 400ms ease-out;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  background: #ffffff;
+  padding: 60px 40px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.empty-state h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+@keyframes slideUpIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 60px 0;
+  }
+  .hero-banner-content h1 {
+    font-size: 32px;
+  }
+  .hero-banner-content p {
+    font-size: 15px;
+  }
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+  }
+}
